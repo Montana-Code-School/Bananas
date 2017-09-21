@@ -1,0 +1,325 @@
+user @ ~/code/expressTest
+ [1] → npm install
+up to date in 1.523s
+
+user @ ~/code/expressTest
+ [2] → node server.js
+module.js:471
+    throw err;
+    ^
+
+Error: Cannot find module 'express'
+    at Function.Module._resolveFilename (module.js:469:15)
+    at Function.Module._load (module.js:417:25)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/BrianBalconi/code/expressTest/server.js:1:77)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+    at Function.Module._load (module.js:438:3)
+
+user @ ~/code/expressTest
+ [3] → npm install express
++ express@4.15.4
+added 42 packages in 5.037s
+
+user @ ~/code/expressTest
+ [4] → node server.js
+this machine is listening to port 8000
+        Error: ENOENT: no such file or directory, stat '/Users/BrianBalconi/code/expressTest/expressTest/bananas.html'
+    at Error (native)
+^C
+
+user @ ~/code/expressTest
+ [5] → node server.js
+this machine is listening to port 8000
+^C
+
+user @ ~/code/expressTest
+ [6] → git init
+Initialized empty Git repository in /Users/BrianBalconi/code/expressTest/.git/
+
+user @ ~/code/expressTest
+ [7] → git remote set-url https://github.com/Montana-Code-School/Bananas.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+user @ ~/code/expressTest
+ [8] → git remote set-url [--push]  https://github.com/Montana-Code-School/Bananas.git
+fatal: No such remote '[--push]'
+
+user @ ~/code/expressTest
+ [9] → git remote set-url [--push] Banana  https://github.com/Montana-Code-School/Bananas.git
+fatal: No such remote '[--push]'
+
+user @ ~/code/expressTest
+ [10] → git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .eslintrc.js
+        bananas.html
+        server.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user @ ~/code/expressTest
+ [11] → git remote add origin https://github.com/Montana-Code-School/Bananas.git
+
+user @ ~/code/expressTest
+ [12] → git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .eslintrc.js
+        bananas.html
+        server.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user @ ~/code/expressTest
+
+user @ ~/code/expressTest
+ [16] → git commit
+Aborting commit due to empty commit message.
+
+user @ ~/code/expressTest
+ [17] → git commit -m "Don't forget to ':q', kid!"
+bash: !": event not found
+
+user @ ~/code/expressTest
+ [17] → git commit -m "Always -m:
+ | →
+
+user @ ~/code/expressTest
+ [17] → git commit -m "Always do a dash m when you commit"
+[master (root-commit) 855f0b5] Always do a dash m when you commit
+ 3 files changed, 21 insertions(+)
+ create mode 100644 .eslintrc.js
+ create mode 100644 bananas.html
+ create mode 100644 server.js
+
+user @ ~/code/expressTest * master
+ [18] → git status
+On branch master
+nothing to commit, working tree clean
+
+user @ ~/code/expressTest * master
+ [19] → git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+user @ ~/code/expressTest * master
+ [20] → git push --set-upstream origin master
+To https://github.com/Montana-Code-School/Bananas.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Montana-Code-School/Bananas.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user @ ~/code/expressTest * master
+ [21] → git create branch readMe
+git: 'create' is not a git command. See 'git --help'.
+
+Did you mean this?
+        reset
+
+user @ ~/code/expressTest * master
+ [22] → git branch readMe
+
+user @ ~/code/expressTest * master
+  readMe
+ [23] → checkout readMe
+bash: checkout: command not found
+
+user @ ~/code/expressTest * master
+  readMe
+ [24] → git checkout readMe
+Switched to branch 'readMe'
+
+user @ ~/code/expressTest   master
+* readMe
+ [25] → git status
+On branch readMe
+nothing to commit, working tree clean
+
+user @ ~/code/expressTest   master
+* readMe
+ [26] → git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Montana-Code-School/Bananas
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> readMe
+
+
+user @ ~/code/expressTest   master
+* readMe
+ [27] → git status
+On branch readMe
+nothing to commit, working tree clean
+
+user @ ~/code/expressTest   master
+* readMe
+ [28] → git checkout master
+Switched to branch 'master'
+
+user @ ~/code/expressTest * master
+  readMe
+ [29] → git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+user @ ~/code/expressTest * master
+  readMe
+ [30] → git push --set-upstream origin master
+To https://github.com/Montana-Code-School/Bananas.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Montana-Code-School/Bananas.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user @ ~/code/expressTest * master
+  readMe
+ [31] → git checkout master
+Already on 'master'
+
+user @ ~/code/expressTest * master
+  readMe
+ [32] → git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+user @ ~/code/expressTest * master
+  readMe
+ [33] → git push --set-upstream origin master
+To https://github.com/Montana-Code-School/Bananas.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Montana-Code-School/Bananas.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user @ ~/code/expressTest * master
+  readMe
+ [34] → git pull
+remote: Counting objects: 2, done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/Montana-Code-School/Bananas
+   4311bd5..b79c8a6  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+user @ ~/code/expressTest * master
+  readMe
+ [35] → git status
+On branch master
+nothing to commit, working tree clean
+
+user @ ~/code/expressTest * master
+  readMe
+ [36] → git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+user @ ~/code/expressTest * master
+
+user @ ~/code/expressTest * master
+  readMe
+ [40] → git remote -v
+origin  https://github.com/Montana-Code-School/Bananas.git (fetch)
+origin  https://github.com/Montana-Code-School/Bananas.git (push)
+
+user @ ~/code/expressTest * master
+  readMe
+ [41] → git pull origin master
+From https://github.com/Montana-Code-School/Bananas
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+user @ ~/code/expressTest * master
+  readMe
+ [42] → git pull origin master --allow-unrelated-histories
+From https://github.com/Montana-Code-School/Bananas
+ * branch            master     -> FETCH_HEAD
+Already up-to-date!
+Merge made by the 'recursive' strategy.
+
+user @ ~/code/expressTest * master
+  readMe
+ [43] → ls
+bananas.html  server.js
+
+user @ ~/code/expressTest * master
+  readMe
+ [44] → git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 743 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Montana-Code-School/Bananas.git
+   b79c8a6..d3a84d9  master -> master
+
+user @ ~/code/expressTest * master
+  readMe
+ [45] → code notes.txt
+
+user @ ~/code/expressTest * master
+  readMe
+ [46] →
